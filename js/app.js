@@ -74,6 +74,28 @@ let sliderProjects = new Swiper('.slider-projects__wrapper', {
 
 });
 
+//FULLSCREAN
+let pageSlider = new Swiper('.page', {
+	wrapperClass: "page__wrapper",
+	slideClass: "page__screen",
+	direction: 'vertical',
+	slidesPerView: 'auto',
+	paralax: true,
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
+	},
+	mousewheel: {
+		sensitivity: 1,
+	},
+	watchOverflow: true,
+	speed: 800,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+});
+
 
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
