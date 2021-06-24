@@ -2,17 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,900&display=swap&subset=cyrillic-ext);
 
-@import url(https://allfont.ru/allfont.css?fonts=ambassadore-normaldisplay=swap&subset=cyrillic-ext);
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular);
-
-@font-face {
-  font-family: "Ambassador";
-  font-display: swap;
-  src: url("../fonts/Ambassador.woff") format("woff"), url("../fonts/Ambassador.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
 
 * {
   padding: 0px;
@@ -117,19 +107,10 @@ body._lock {
 }
 
 .wrapper {
-  width: 100%;
   min-height: 100%;
-  overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(rgba(75, 0, 130, 0.5)), to(rgba(148, 0, 211, 0.5)));
   background: -o-linear-gradient(left, rgba(75, 0, 130, 0.5) 0%, rgba(148, 0, 211, 0.5) 100%);
   background: linear-gradient(90deg, rgba(75, 0, 130, 0.5) 0%, rgba(148, 0, 211, 0.5) 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 ._container {
@@ -931,7 +912,6 @@ body.ie ._ibg img {
 }
 
 .header__request {
-  font-family: "Ambassador";
   color: inherit;
   font-size: 15px;
   line-height: 14px;
@@ -1081,9 +1061,32 @@ body.ie ._ibg img {
 }
 
 .page {
+  margin: 83px 0px 0px 0px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page__screen {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
 }
 
 ._title {
@@ -1287,6 +1290,7 @@ body.ie ._ibg img {
           align-items: center;
   height: 140px;
   margin: 0px 0px 37px 0px;
+  cursor: pointer;
 }
 
 .mini-slider__slide {
@@ -1302,7 +1306,6 @@ body.ie ._ibg img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  cursor: pointer;
 }
 
 .mini-slider__controls {
@@ -1361,13 +1364,14 @@ body.ie ._ibg img {
   max-width: 1013px;
   overflow: hidden;
   height: 400px;
+  cursor: pointer;
 }
 
 .slider-projects__slide {
   background: #9883e5;
   -webkit-box-shadow: 0px 2px 6px 2px rgba(255, 255, 255, 0.26);
           box-shadow: 0px 2px 6px 2px rgba(255, 255, 255, 0.26);
-  height: calc((100% -16px) / 2);
+  height: calc((100% - 16px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

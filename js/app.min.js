@@ -58,8 +58,8 @@ let sliderMini = new Swiper('.mini-slider__wrapper', {
 });
 
 let sliderProjects = new Swiper('.slider-projects__wrapper', {
-	// observer: true,
-	// observeParents: true,
+	observer: true,
+	observeParents: true,
 	slidesPerView: 3,
 	slidesPerColumn: 2,
 	spaceBetween: 16,
